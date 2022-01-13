@@ -1,0 +1,30 @@
+mixin nav(inIndex = true)
+  -
+    const indexCls = inIndex ? 'active' : ''
+    const indexUrl = isIndex ? './' : './index.html'
+    const apiCls = inIndex ? '' : 'active'
+
+  .g-nav
+    .container
+      h1 SVG Differ
+      .menu
+        a.menu-item(class=indexCls href=indexUrl) 案例
+        a.menu-item(href='https://github.com/ykan/svg-differ' target='_blank') Github
+
+
+<!DOCTYPE html>
+html
+  head
+    meta(charset='utf-8')
+    title SVG Differ 文档
+    if cssUrl
+      link(rel="stylesheet" href=cssUrl)
+  body
+    block main
+
+    .g-footer svg differ
+
+    block scripts
+
+
+
